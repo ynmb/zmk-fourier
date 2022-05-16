@@ -25,7 +25,7 @@
     &kp ESC   &kp Q    &kp W    &kp E     &kp R     &kp T   /**/ &kp Y       &kp U  &kp I     &kp O     &kp P     &none  &kp BACKSPACE
     &kp TAB   &kp A    &kp S    &kp D     &kp F     &kp G   /**/ &kp H       &kp J  &kp K     &kp L     &kp SQT   &kp ENTER
     &kp LSHFT &kp Z    &kp X    &kp C     &kp V     &kp B   /**/ &kp N       &kp M  &kp COMMA &kp DOT   &kp FSLH  &kp RSHFT
-    &kp LCTRL &kp LALT &kp LGUI &kp C     &kp SPACE         /**/ &lt 1 SPACE        &mo 2     &kp RGUI  &kp RALT  &kp RCTRL
+    &kp LCTRL &kp LALT &kp LGUI &none     &kp SPACE         /**/ &lt 1 SPACE        &mo 2     &kp RGUI  &kp RALT  &kp RCTRL
             >;
         };
 
@@ -41,7 +41,7 @@
     &kp N1     &kp N2   &kp N3   &kp N4    &kp N5    &kp N6        /**/ &kp N7    &kp N8   &kp N9    &kp N0    &kp PSCRN  &none  &kp DEL
     &kp GRAVE  &none    &kp LEFT &kp UP    &kp RIGHT &kp C_VOL_UP  /**/ &kp LBKT  &kp RBKT &kp MINUS &kp EQUAL &kp SEMI   &kp BACKSLASH
     &trans     &none    &none    &none     &kp DOWN  &kp C_VOL_DN  /**/ &none     &none    &none     &none     &none      &trans
-    &trans     &trans   &trans   &none     &trans                  /**/ &trans             &trans    &trans    &trans     &trans
+    &bt BT_CLR     &trans   &trans   &none     &trans                  /**/ &trans             &trans    &trans    &trans     &trans
             >;
         };
 
