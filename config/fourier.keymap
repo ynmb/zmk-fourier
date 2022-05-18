@@ -40,7 +40,7 @@
             bindings = <
     &trans     &kp N1    &kp N2    &kp N3   &kp N4     &kp N5          /**/ &kp N6     &kp N7    &kp N8     &kp N9     &kp N0      &none   &kp DEL
     &trans     &kp LEFT  &kp DOWN  &kp UP   &kp RIGHT  &none           /**/ &kp LBKT   &kp RBKT  &kp MINUS  &kp EQUAL  &kp SEMI    &trans
-    &trans     &none     &none     &none    &none      &none           /**/ &kp GRAVE  &none     &none      &none      &BACKSLASH  &trans
+    &trans     &none     &none     &none    &none      &none           /**/ &kp GRAVE  &none     &none      &none      &kp BACKSLASH  &trans
     &trans     &trans    &trans    &trans   &trans                     /**/ &trans     &trans    &trans     &trans     &trans
             >;
         };
