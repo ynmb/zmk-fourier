@@ -15,33 +15,33 @@
 
 // ----------------------------------------------      ----------------------------------------------
 // | ESC  |  Q  |  W  |  E  |  R  |  T  |               |  Y  |  U  |  I  |  O  |  P     |    BKSP   |
-// | TAB    |  A  |  S  |  D   |  F  |  G  |              |  H  |  J  |  K  |  L  |  '  |    ENTER   |
-// | SHIFT     |  Z  |  X  |  C  |  V  |  B  |               |  N  |  M  |  ,  |  .  |  /  |  RSHFT  |
+// | TAB    |  A  |  S  |  D   |  F  |  G  |              |  H  |  J  |  K  |  L  |  ;:  |    ENTER   |
+// | SHIFT     |  Z  |  X  |  C  |  V  |  B  |               |  N  |  M  |  ,<  |  .>  |  /?  |  RSHFT  |
 // | HYPER  | LCTRL   | LALT| LGUI |   SPACE/L1  |           | SPACE/L1  | L2 |  RGUI  |  RALT  |RCTRL|
 // -------------------------------------------        -----------------------------------------------
 
         default_layer {
             bindings = <
-    &kp ESC                &kp Q      &kp W     &kp E     &kp R        &kp T     /**/ &kp Y         &kp U  &kp I      &kp O     &kp P      &none      &kp BACKSPACE
-    &kp TAB                &kp A      &kp S     &kp D     &kp F        &kp G     /**/ &kp H         &kp J  &kp K      &kp L     &kp SQT    &kp ENTER
-    &kp LSHFT              &kp Z      &kp X     &kp C     &kp V        &kp B     /**/ &kp N         &kp M  &kp COMMA  &kp DOT   &kp FSLH   &kp RSHFT
+    &kp ESC                &kp Q      &kp W     &kp E     &kp R        &kp T     /**/ &kp Y         &kp U  &kp I      &kp O     &kp P       &none       &kp BACKSPACE
+    &kp TAB                &kp A      &kp S     &kp D     &kp F        &kp G     /**/ &kp H         &kp J  &kp K      &kp L     &kp SEMI    &kp ENTER
+    &kp LSHFT              &kp Z      &kp X     &kp C     &kp V        &kp B     /**/ &kp N         &kp M  &kp COMMA  &kp DOT   &kp FSLH    &kp RSHFT
     &kp LS(LC(LA(LGUI)))   &kp LCTRL  &kp LALT  &kp LGUI  &lt 1 SPACE            /**/ &lt 1 SPACE   &mo 2  &kp RGUI   &kp RALT  &kp RCTRL
             >;
         };
 
 // ----------------------------------------------      ----------------------------------------------
-// | trans |  1   |  2  |  3  |  4  |  5  |               |  6  |  7   |  8   |  9   |  O   |  DEL   |
-// | trans  |  <-   |  v |  ^   |  -> |      |             |  [  |  ]  |  -  |  =  |  ;  |   trans   |
-// | trans    |     |     |     |     |      |              |  `   |     |    |     |  \  |  trans   |
+// | trans |  1   |  2  |  3  |  4  |  5  |               |  6  |  7   |  8   |  9   |  O   |  trans |
+// | trans  |  <-   |  v |  ^   |  -> |      |             |     |  '"  |  {[  |  ]}  |  trans  |   trans   |
+// | trans    |     |     |     |     |      |              |     |  `~   |  -_  |  =+   |  \|  |  trans   |
 // | trans | trans| trans |   trans | trans    |             |   trans | trans | trans | trans|trans|
 // -------------------------------------------        -----------------------------------------------
 
         symbols_layer {
             bindings = <
-    &trans     &kp N1    &kp N2    &kp N3   &kp N4     &kp N5          /**/ &kp N6     &kp N7    &kp N8     &kp N9     &kp N0      &none   &kp DEL
-    &trans     &kp LEFT  &kp DOWN  &kp UP   &kp RIGHT  &none           /**/ &kp LBKT   &kp RBKT  &kp MINUS  &kp EQUAL  &kp SEMI    &trans
-    &trans     &none     &none     &none    &none      &none           /**/ &kp GRAVE  &none     &none      &none      &kp BACKSLASH  &trans
-    &trans     &trans    &trans    &trans   &trans                     /**/ &trans     &trans    &trans     &trans     &trans
+    &trans     &kp N1    &kp N2    &kp N3   &kp N4     &kp N5          /**/ &kp N6     &kp N7     &kp N8     &kp N9     &kp N0         &none    &trans
+    &trans     &kp LEFT  &kp DOWN  &kp UP   &kp RIGHT  &none           /**/ &none      &kp SQT    &kp LBKT   &kp RBKT   &trans         &trans
+    &trans     &none     &none     &none    &none      &none           /**/ &none      &kp GRAVE  &kp MINUS  &kp EQUAL  &kp BACKSLASH  &trans
+    &trans     &trans    &trans    &trans   &trans                     /**/ &trans     &trans     &trans     &trans     &trans
             >;
         };
 
