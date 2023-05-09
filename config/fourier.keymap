@@ -13,12 +13,12 @@
     keymap {
         compatible = "zmk,keymap";
 
-// ----------------------------------------------      ----------------------------------------------
-// | ESC  |  Q  |  W  |  E  |  R  |  T  |               |  Y  |  U  |  I  |  O  |  P     |    BKSP   |
-// | TAB    |  A  |  S  |  D   |  F  |  G  |              |  H  |  J  |  K  |  L  |  ;:  |    ENTER   |
-// | SHIFT     |  Z  |  X  |  C  |  V  |  B  |               |  N  |  M  |  ,<  |  .>  |  /?  |  RSHFT  |
-// | HYPER  | LCTRL   | LALT| LGUI |   SPACE/L1  |           | SPACE/L1  | L2 |  RGUI  |  RALT  |RCTRL|
-// -------------------------------------------        -----------------------------------------------
+// -------------------------------------------------------------------------        ---------------------------------------------------------------
+// |    ESC             |  Q        |  W      |  E      | R          |  T  |        |  Y           |  U   | I       |  O     |  P     |    BKSP   |
+// |    TAB             |  A        |  S      |  D      | F          |  G  |        |  H           |  J   | K       |  L     |  ;:    |    ENTER  |
+// |    SHIFT           |  Z        |  X      |  C      | V          |  B  |        |  N           |  M   | ,<      |  .>    |  /?    |    RSHFT  |
+// |    HYPER           |  LCTRL    | LALT    | LGUI    | SPACE/L1   |              | SPACE/L1     | L2   | RGUI    |  RALT  |  RCTRL |
+// -------------------------------------------------------------------------        ----------------------------------------------------------------
 
         default_layer {
             bindings = <
@@ -29,35 +29,35 @@
             >;
         };
 
-// ----------------------------------------------      ----------------------------------------------
-// | trans |  1   |  2  |  3  |  4  |  5  |               |  6  |  7   |  8   |  9   |  O   |  trans |
-// | trans  |  <-   |  v |  ^   |  -> |      |             |     |  '"  |  {[  |  ]}  |  trans  |   trans   |
-// | trans    |     |     |     |     |      |              |     |  `~   |  -_  |  =+   |  \|  |  trans   |
-// | trans | trans| trans |   trans | trans    |             |   trans | trans | trans | trans|trans|
-// -------------------------------------------        -----------------------------------------------
+// -------------------------------------------------------------                    ---------------------------------------------------------------------
+// | trans   |  1      |  2       |  3        |  4      |  5   |                    |  6       |  7       |  8       |  9       |  O          |  trans   |
+// | trans   |  <-     |  v       |  ^        |  ->     |      |                    |          |  '"      |  {[      |  ]}      |  trans      |  trans   |
+// | trans   |  HOME   |  PG_DN   | PG_UP     |  END    |      |                    |          |  `~      |  -_      |  =+      |  \|         |  trans   |
+// | trans   |  trans  |  trans   | trans     | trans   |                           | trans    | trans    | trans    | trans    |trans        |
+// -------------------------------------------------------------                    ----------------------------------------------------------------------
 
         symbols_layer {
             bindings = <
-    &trans     &kp N1    &kp N2    &kp N3   &kp N4     &kp N5          /**/ &kp N6     &kp N7     &kp N8     &kp N9     &kp N0         &none    &trans
-    &trans     &kp LEFT  &kp DOWN  &kp UP   &kp RIGHT  &none           /**/ &none      &kp SQT    &kp LBKT   &kp RBKT   &trans         &trans
-    &trans     &none     &none     &none    &none      &none           /**/ &none      &kp GRAVE  &kp MINUS  &kp EQUAL  &kp BACKSLASH  &trans
-    &trans     &trans    &trans    &trans   &trans                     /**/ &trans     &trans     &trans     &trans     &trans
+    &trans     &kp N1    &kp N2     &kp N3     &kp N4     &kp N5                 /**/ &kp N6     &kp N7     &kp N8     &kp N9     &kp N0         &none    &trans
+    &trans     &kp LEFT  &kp DOWN   &kp UP     &kp RIGHT  &none                  /**/ &none      &kp SQT    &kp LBKT   &kp RBKT   &trans         &trans
+    &trans     &kp HOME  &kp PG_DN  &kp PG_DN  &kp END    &none                  /**/ &none      &kp GRAVE  &kp MINUS  &kp EQUAL  &kp BACKSLASH  &trans
+    &trans     &trans    &trans     &trans     &trans                            /**/ &trans     &trans     &trans     &trans     &trans
             >;
         };
 
-// ----------------------------------------------      ----------------------------------------------
-// | trans | F1   |  F2 |  F3 |  F4 | F5  |  F6 |              |  F7 |  F8  | F9  | F1O  | F11      |  trans  |
-// | trans   | home | PG_DN | PG_UP | end |     |           |     |     |     |  F11   |    F12  |  trans  |
-// | trans    | BT_CLR |   BT_NXT  |     |      |           |       |    |    |    |    |  trans  |
-// | trans | trans | trans | trans |  trans        |           | trans   | trans | trans | trans | trans |
-// -------------------------------------------        -----------------------------------------------
+// ------------------------------------------------------------                       -----------------------------------------------------
+// | trans  | F1        | F2       |  F3       |  F4    | F5  |                       |  F6     |  F7     |  F8    | F9     | F1O      | trans  |
+// | trans  |           |          |           |        |     |                       |         |         |        | F11    | F12      | trans  |
+// | trans  | BT_CLR    | BT_NXT   |           |        |     |                       |         |         |        |        | trans    |
+// | trans  | trans     | trans    | trans     | trans  |                             | trans   | trans   | trans  | trans  | trans    |
+// ------------------------------------------------------------                       ------------------------------------------------------
 
         fn_layer {
             bindings = <
-    &trans   &kp F1      &kp F2      &kp F3     &kp F4   &kp F5    /**/ &kp F6  &kp F7  &kp F8   &kp F9   &kp F10   &none   &trans
-    &trans   &kp HOME    &kp PG_DN   &kp PG_UP  &kp END  &none     /**/ &none   &none   &none    &kp F11  &kp F12   &trans
-    &trans   &bt BT_CLR  &bt BT_NXT  &none      &none    &none     /**/ &none   &none   &none    &none    &none     &trans
-    &trans   &trans      &trans      &trans     &trans             /**/ &trans  &trans  &trans   &trans   &trans
+    &trans   &kp F1      &kp F2      &kp F3     &kp F4   &kp F5                   /**/ &kp F6    &kp F7    &kp F8   &kp F9     &kp F10   &none   &trans
+    &trans   &none       &none       &none      &nne     &none                    /**/ &none     &none     &none    &kp F11    &kp F12   &trans
+    &trans   &bt BT_CLR  &bt BT_NXT  &none      &none    &none                    /**/ &none     &none     &none    &none      &none     &trans
+    &trans   &trans      &trans      &trans     &trans                            /**/ &trans    &trans    &trans   &trans     &trans
             >;
         };
     };
