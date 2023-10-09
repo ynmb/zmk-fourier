@@ -32,7 +32,7 @@
 // -------------------------------------------------------------                    ---------------------------------------------------------------------
 // | trans   |  1      |  2       |  3        |  4      |  5   |                    |  6       |  7       |  8       |  9       |  O          |  trans   |
 // | trans   |  <-     |  v       |  ^        |  ->     |      |                    |          |  '"      |  {[      |  ]}      |  trans      |  trans   |
-// | trans   |  HOME   |  PG_DN   | PG_UP     |  END    |      |                    |          |  `~      |  -_      |  =+      |  \|         |  trans   |
+// | trans   |         |          |           |         |      |                    |          |  `~      |  -_      |  =+      |  \|         |  trans   |
 // | trans   |  trans  |  trans   | trans     | trans   |                           | trans    | trans    | trans    | trans    |trans        |
 // -------------------------------------------------------------                    ----------------------------------------------------------------------
 
@@ -40,7 +40,7 @@
             bindings = <
     &trans     &kp N1    &kp N2     &kp N3     &kp N4     &kp N5                 /**/ &kp N6     &kp N7     &kp N8     &kp N9     &kp N0         &none    &trans
     &trans     &kp LEFT  &kp DOWN   &kp UP     &kp RIGHT  &none                  /**/ &none      &kp SQT    &kp LBKT   &kp RBKT   &trans         &trans
-    &trans     &kp HOME  &kp PG_DN  &kp PG_DN  &kp END    &none                  /**/ &none      &kp GRAVE  &kp MINUS  &kp EQUAL  &kp BACKSLASH  &trans
+    &trans     &none     &none      &none      &none      &none                  /**/ &none      &kp GRAVE  &kp MINUS  &kp EQUAL  &kp BACKSLASH  &trans
     &trans     &trans    &trans     &trans     &trans                            /**/ &trans     &trans     &trans     &trans     &trans
             >;
         };
