@@ -7,57 +7,56 @@
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/keys.h>
-#include <dt-bindings/zmk/rgb.h>
 
 / {
     keymap {
         compatible = "zmk,keymap";
 
-// -------------------------------------------------------------------------        ---------------------------------------------------------------
-// |    ESC             |  Q        |  W      |  E      | R          |  T  |        |  Y           |  U   | I       |  O     |  P     |    BKSP   |
-// |    TAB             |  A        |  S      |  D      | F          |  G  |        |  H           |  J   | K       |  L     |  ;:    |    ENTER  |
-// |    SHIFT           |  Z        |  X      |  C      | V          |  B  |        |  N           |  M   | ,<      |  .>    |  /?    |    RSHFT  |
-// |    HYPER           |  LCTRL    | LALT    | LGUI    | SPACE/L1   |              | SPACE/L1     | L2   | RGUI    |  RALT  |  RCTRL |
-// -------------------------------------------------------------------------        ----------------------------------------------------------------
+        // -------------------------------------------------------------------------        ---------------------------------------------------------------
+        // |    ESC             |  Q        |  W      |  E      | R          |  T  |        |  Y           |  U   | I       |  O     |  P     |    BKSP   |
+        // |    TAB             |  A        |  S      |  D      | F          |  G  |        |  H           |  J   | K       |  L     |  ;:    |    ENTER  |
+        // |    SHIFT           |  Z        |  X      |  C      | V          |  B  |        |  N           |  M   | ,<      |  .>    |  /?    |    RSHFT  |
+        // |    HYPER           |  LCTRL    | LALT    | LGUI    | SPACE/L1   |              | SPACE/L1     | L2   | RGUI    |  RALT  |  RCTRL |
+        // -------------------------------------------------------------------------        ----------------------------------------------------------------
 
         default_layer {
             bindings = <
-    &kp ESC                &kp Q      &kp W     &kp E     &kp R        &kp T     /**/ &kp Y         &kp U  &kp I      &kp O     &kp P       &none       &kp BACKSPACE
-    &kp TAB                &kp A      &kp S     &kp D     &kp F        &kp G     /**/ &kp H         &kp J  &kp K      &kp L     &kp SEMI    &kp ENTER
-    &kp LSHFT              &kp Z      &kp X     &kp C     &kp V        &kp B     /**/ &kp N         &kp M  &kp COMMA  &kp DOT   &kp FSLH    &kp RSHFT
-    &kp LS(LC(LA(LGUI)))   &kp LCTRL  &kp LALT  &kp LGUI  &lt 1 SPACE            /**/ &lt 1 SPACE   &mo 2  &kp RGUI   &kp RALT  &kp RCTRL
+&kp ESC                     &kp Q      &kp W     &kp E  &kp R        &kp T    &kp Y        &kp U  &kp I      &kp O     &kp P     &none                        &kp BACKSPACE
+&kp TAB                     &kp A      &kp S     &kp D  &kp F        &kp G    &kp H        &kp J  &kp K      &kp L     &kp SEMI  &kp ENTER
+&mt LSHFT LEFT_PARENTHESIS  &kp Z      &kp X     &kp C  &kp V        &kp B    &kp N        &kp M  &kp COMMA  &kp DOT   &kp FSLH  &mt RSHFT RIGHT_PARENTHESIS
+&kp LS(LC(LA(LGUI)))        &kp LCTRL  &kp LALT  &mo 2  &lt 1 SPACE           &lt 1 SPACE         &mo 2      &kp RGUI  &kp RALT  &kp RCTRL
             >;
         };
 
-// -------------------------------------------------------------                    ---------------------------------------------------------------------
-// | trans   |  1      |  2       |  3        |  4      |  5   |                    |  6       |  7       |  8       |  9       |  O          |  trans   |
-// | trans   |  <-     |  v       |  ^        |  ->     |      |                    |          |  '"      |  {[      |  ]}      |  trans      |  trans   |
-// | trans   |         |          |           |         |      |                    |          |  `~      |  -_      |  =+      |  \|         |  trans   |
-// | trans   |  trans  |  trans   | trans     | trans   |                           | trans    | trans    | trans    | trans    |trans        |
-// -------------------------------------------------------------                    ----------------------------------------------------------------------
+        // -------------------------------------------------------------                    ---------------------------------------------------------------------
+        // | trans   |  1      |  2       |  3        |  4      |  5   |                    |  6       |  7       |  8       |  9       |  O          |  trans   |
+        // | trans   |  <-     |  v       |  ^        |  ->     |      |                    |          |  '"      |  {[      |  ]}      |  trans      |  trans   |
+        // | trans   |         |          |           |         |      |                    |          |  `~      |  -_      |  =+      |  \|         |  trans   |
+        // | trans   |  trans  |  trans   | trans     | trans   |                           | trans    | trans    | trans    | trans    |trans        |
+        // -------------------------------------------------------------                    ----------------------------------------------------------------------
 
         symbols_layer {
             bindings = <
-    &trans     &kp N1    &kp N2     &kp N3     &kp N4     &kp N5                 /**/ &kp N6     &kp N7     &kp N8     &kp N9     &kp N0         &none    &trans
-    &trans     &kp LEFT  &kp DOWN   &kp UP     &kp RIGHT  &none                  /**/ &none      &kp SQT    &kp LBKT   &kp RBKT   &trans         &trans
-    &trans     &none     &none      &none      &none      &none                  /**/ &none      &kp GRAVE  &kp MINUS  &kp EQUAL  &kp BACKSLASH  &trans
-    &trans     &trans    &trans     &trans     &trans                            /**/ &trans     &trans     &trans     &trans     &trans
+&trans  &kp N1    &kp N2       &kp N3    &kp N4      &kp N5         &kp N6     &kp N7     &kp N8     &kp N9     &kp N0         &none   &trans
+&trans  &kp EXCL  &kp AT_SIGN  &kp HASH  &kp DOLLAR  &kp PERCENT    &kp CARET  &kp AMPS   &kp ASTRK  &kp MINUS  &kp LS(MINUS)  &trans
+&trans  &none     &none        &none     &none       &none          &none      &kp GRAVE  &kp MINUS  &kp EQUAL  &kp BACKSLASH  &trans
+&trans  &trans    &trans       &trans    &trans                     &trans                &trans     &trans     &trans         &trans
             >;
         };
 
-// ------------------------------------------------------------                       -----------------------------------------------------
-// | trans  | F1        | F2       |  F3       |  F4    | F5  |                       |  F6     |  F7     |  F8    | F9     | F1O      | trans  |
-// | trans  |           |          |           |        |     |                       |         |         |        | F11    | F12      | trans  |
-// | trans  | BT_CLR    | BT_NXT   |           |        |     |                       |         |         |        |        | trans    |
-// | trans  | trans     | trans    | trans     | trans  |                             | trans   | trans   | trans  | trans  | trans    |
-// ------------------------------------------------------------                       ------------------------------------------------------
+        // ------------------------------------------------------------                       -----------------------------------------------------
+        // | trans  | F1        | F2       |  F3       |  F4    | F5  |                       |  F6     |  F7     |  F8    | F9     | F1O      | trans  |
+        // | trans  |           |          |           |        |     |                       |         |         |        | F11    | F12      | trans  |
+        // | trans  | BT_CLR    | BT_NXT   |           |        |     |                       |         |         |        |        | trans    |
+        // | trans  | trans     | trans    | trans     | trans  |                             | trans   | trans   | trans  | trans  | trans    |
+        // ------------------------------------------------------------                       ------------------------------------------------------
 
         fn_layer {
             bindings = <
-    &trans   &kp F1      &kp F2      &kp F3     &kp F4   &kp F5                   /**/ &kp F6    &kp F7    &kp F8   &kp F9     &kp F10   &none   &trans
-    &trans   &none       &none       &none      &none    &none                    /**/ &none     &none     &none    &kp F11    &kp F12   &trans
-    &trans   &bt BT_CLR  &bt BT_NXT  &none      &none    &none                    /**/ &none     &none     &none    &none      &none     &trans
-    &trans   &trans      &trans      &trans     &trans                            /**/ &trans    &trans    &trans   &trans     &trans
+&trans  &kp HOME            &kp UP_ARROW        &kp END              &kp F4  &kp F5    &kp F6      &kp F7      &kp F8      &kp F9   &kp F10  &none   &trans
+&trans  &kp LEFT_ARROW      &kp DOWN_ARROW      &kp RIGHT_ARROW      &none   &none     &none       &none       &none       &kp F11  &kp F12  &trans
+&trans  &kp LG(LEFT_ARROW)  &kp LG(DOWN_ARROW)  &kp LG(RIGHT_ARROW)  &none   &none     &bt BT_CLR  &bt BT_NXT  &bt BT_PRV  &none    &none    &trans
+&trans  &trans              &trans              &trans               &trans            &trans                  &trans      &trans   &trans   &trans
             >;
         };
     };
